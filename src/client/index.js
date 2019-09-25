@@ -1,8 +1,13 @@
-import { checkForName } from './js/nameChecker'
-import { handleSubmit } from './js/formHandler'
+import { callAPI } from './js/formHandler'
+import { renderResult } from './js/RenderResult'
 import './styles/style.scss'
 
-console.log(checkForName);
 
-alert("I EXIST")
-console.log("CHANGE!!");
+const urlText = document.getElementById('url');
+const submitButton = document.getElementById('submit')
+
+submitButton.addEventListener('click', async (event) => {
+  event.preventDefault()
+  const data = await callAPI(urlText.value)
+  renderResult(data)
+})

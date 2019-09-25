@@ -21,9 +21,17 @@ This is done by:
 
 ## Step 3: Build the Project (client app)
 
-This is done by running:
+To build for production:
 
 - `npm run build`
+
+To build for development:
+
+- `npm run build-dev`
+
+To start development Server:
+
+- `npm run dev-serve`
 
 ## Step 4: Start the local server
 

@@ -1,42 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Evaluate News App</title>
+  </head>
 
-<head>
-    <meta charset="utf-8">
-    <title>Test</title>
-    
-</head>
-
-<body>
-
-    <header>
-        <div class="">
-            Logo2
-        </div>
-        <div class="">
-            navigation
-        </div>
-    </header>
-
+  <body>
     <main>
-        <section>
-            <form class="" onsubmit="return handleSubmit(event)">
-                <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                <input type="submit" name="" value="submit" onclick="return handleSubmit(event)"
-                    onsubmit="return handleSubmit(event)">
-            </form>
-            <section>
+      <section>
+        <form class="">
+          <input id="url" type="text" name="url" value="" placeholder="url" />
+          <input type="submit" id="submit" name="" value="submit" />
+        </form>
+      </section>
 
-                <section>
-                    <strong>Form Results:</strong>
-                    <div id="results"></div>
-                </section>
+      <section>
+        <h2>Form Results:</h2>
+        <div>
+          <p><strong>Polarity: </strong><span id="polarity"></span></p>
+          <p><strong>Subjectivity: </strong><span id="subjectivity"></span></p>
+          <p><strong>Text: </strong><span id="text"></span></p>
+          <p>
+            <strong>Polarity Confidence: </strong><span id="pconfidence"></span>
+          </p>
+          <p>
+            <strong>Subjectivity Confidence: </strong
+            ><span id="sconfidence"></span>
+          </p>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <p>This is a footer</p>
+      <p>This is a footer</p>
     </footer>
-
-</body>
-
+  </body>
 </html>
