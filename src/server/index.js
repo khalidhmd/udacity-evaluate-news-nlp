@@ -3,6 +3,7 @@ dotenv.config();
 const path = require('path')
 const express = require('express')
 const aylien = require("aylien_textapi");
+const cors = require('cors')
 
 // set aylien API credentias
 var textapi = new aylien({
@@ -11,7 +12,7 @@ var textapi = new aylien({
 });
 
 const app = express()
-
+app.use(cors())
 app.use(express.static('dist'))
 
 
