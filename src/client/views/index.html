@@ -8,7 +8,7 @@
   <body>
     <main>
       <section>
-        <form class="">
+        <form name="form" onsubmit="return validateForm()" class="" id="form">
           <input id="url" type="text" name="url" value="" placeholder="url" />
           <input type="submit" id="submit" name="" value="submit" />
         </form>
@@ -35,11 +35,26 @@
       <p>This is a footer</p>
     </footer>
     <script>
+      // function validateForm() {
+      //   var x = document.forms["form"]["url"].value;
+      //   if (x == "") {
+      //     alert("Url must be filled out");
+      //     return false;
+      //   }
+      // }
+
       // Check that service workers are supported
       if ("serviceWorker" in navigator) {
         // Use the window load event to keep the page load performant
         window.addEventListener("load", () => {
-          navigator.serviceWorker.register("/service-worker.js");
+          navigator.serviceWorker
+            .register("service-worker.js")
+            .then(() => {
+              console.log("serviceworker registered");
+            })
+            .catch(err => {
+              console.log(err);
+            });
         });
       }
     </script>

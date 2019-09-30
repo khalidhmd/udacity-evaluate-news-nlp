@@ -4,9 +4,9 @@ import './styles/style.scss'
 
 
 const urlText = document.getElementById('url');
-const submitButton = document.getElementById('submit')
+const form = document.getElementById('form')
 
-submitButton.addEventListener('click', async (event) => {
+form.addEventListener('submit', async (event) => {
   event.preventDefault()
   const data = await callAPI(urlText.value)
   renderResult(data)
