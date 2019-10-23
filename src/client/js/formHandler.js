@@ -1,8 +1,14 @@
-const callAPI = async (url) => {
+const axios = require('axios')
+async function callAPI(url) {
     const baseUrl = 'http://localhost:8080/test?url='
-    const response = await fetch(`${baseUrl}${url}`);
-    const data = await response.json();
-    return data;
+    try {
+        const response = await axios.get(`${baseUrl}${url}`);
+        return response.data;
+    } catch (err) {
+        console.log(err)
+        return err;
+    }
 }
+
 
 export { callAPI }

@@ -14,6 +14,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "axios": "^0.19.0",
     "aylien_textapi": "^0.7.0",
     "cors": "^2.8.5",
     "dotenv": "^8.1.0",
@@ -23,8 +24,13 @@
   },
   "devDependencies": {
     "@babel/core": "^7.5.4",
+    "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/preset-env": "^7.5.4",
+    "@babel/runtime": "^7.6.3",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.0",
     "html-webpack-plugin": "^3.2.0",
@@ -33,9 +39,11 @@
     "node-sass": "^4.12.0",
     "nodemon": "^1.19.3",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "regenerator-runtime": "^0.13.3",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "terser-webpack-plugin": "^2.1.0",
+    "transform-runtime": "0.0.0",
     "webpack-dev-server": "^3.7.2",
     "webpack-merge": "^4.2.2",
     "workbox-webpack-plugin": "^4.3.1"
